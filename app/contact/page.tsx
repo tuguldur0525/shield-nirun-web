@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
 
   // ЭНД өөрийн имэйлээ солиорой
-  const toEmail = "info@shieldnirun.mn";
+  const toEmail = "tokut243@gmail.com";
 
   const mailtoHref = useMemo(() => {
     const subject = encodeURIComponent("Үнийн санал / Холбоо барих хүсэлт");
