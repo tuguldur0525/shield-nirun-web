@@ -539,7 +539,7 @@ export default function Home() {
       {/* =========================
           PROCESS
          ========================= */}
-      <section className="relative overflow-hidden py-8">
+      <section className="relative overflow-hidden py-1">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-white to-sky-50" />
         <div className="absolute left-1/2 top-8 -z-10 h-72 w-[900px] -translate-x-1/2 rounded-full bg-sky-200/30 blur-3xl" />
         <hr/>
@@ -673,7 +673,7 @@ export default function Home() {
       {/* =========================
           CTA
          ========================= */}
-      <section className="relative overflow-hidden py-6">
+      <section className="relative overflow-hidden py-1">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-sky-50 via-white to-white" />
         <div className="absolute left-1/2 top-8 -z-10 h-72 w-[900px] -translate-x-1/2 rounded-full bg-sky-200/30 blur-3xl" />
 
