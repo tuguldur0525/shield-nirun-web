@@ -111,7 +111,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" onClick={() => setOpen(false)} className="flex items-center">
             <Image
-              src="/nirunLOGO.svg"
+              src="/nirunLogo.svg"
               alt="Shield Nirun"
               width={100}
               height={30}

@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/nirunLOGO.svg"
+                src="/nirunLogo.svg"
                 alt="Shield Nirun"
                 width={140}
                 height={40}
