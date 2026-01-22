@@ -1,132 +1,228 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-12">
-      <h1 className="text-3xl font-bold">Бидний тухай</h1>
-      <p className="mt-2 text-gray-600">
-        Shield Nirun нь аюулгүй байдлын чиглэлээр байгууллага, объект болон харилцагчдын хэрэгцээнд
-        нийцсэн шийдэл, үйлчилгээг санал болгодог.
-      </p>
+    <main className="relative overflow-hidden">
+      {/* Light + canvas background (shared design) */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-sky-50" />
 
-      {/* Intro cards */}
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        <div className="rounded-3xl border p-6">
-          <div className="text-sm text-gray-500">Алсын хараа</div>
-          <div className="mt-2 text-lg font-semibold">Найдвартай хамгаалалт, тогтвортой орчин</div>
-          <p className="mt-2 text-gray-700">
-            Аюулгүй байдлын чанартай үйлчилгээ, системтэй ажиллагаагаар харилцагчийн итгэлийг бүтээнэ.
-          </p>
-        </div>
+        <div className="absolute -top-40 -left-40 h-[620px] w-[620px] rounded-full bg-sky-200/28 blur-[120px]" />
+        <div className="absolute -top-44 right-[-220px] h-[680px] w-[680px] rounded-full bg-cyan-200/22 blur-[140px]" />
+        <div className="absolute bottom-[-260px] left-1/3 h-[720px] w-[720px] rounded-full bg-sky-100/30 blur-[160px]" />
 
-        <div className="rounded-3xl border p-6">
-          <div className="text-sm text-gray-500">Эрхэм зорилго</div>
-          <div className="mt-2 text-lg font-semibold">Эрсдэлийг бууруулж, хамгаалалтыг сайжруулах</div>
-          <p className="mt-2 text-gray-700">
-            Үйл ажиллагаанд нийцсэн хамгаалалтын шийдэл боловсруулж, хэрэгжилтийг тогтвортой хангана.
-          </p>
-        </div>
+        <div
+          className="absolute inset-0 opacity-[0.045]
+          [background-image:
+            linear-gradient(to_right,rgba(2,132,199,0.35)_1px,transparent_1px),
+            linear-gradient(to_bottom,rgba(2,132,199,0.25)_1px,transparent_1px)
+          ]
+          [background-size:96px_96px]"
+        />
 
-        <div className="rounded-3xl border p-6">
-          <div className="text-sm text-gray-500">Үнэ цэнэ</div>
-          <div className="mt-2 text-lg font-semibold">Хариуцлага • Шударга • Шуурхай</div>
-          <p className="mt-2 text-gray-700">
-            Харилцагчийн аюулгүй байдлыг нэн тэргүүнд тавьж, ил тод, чанартай үйлчилгээг баримтална.
-          </p>
-        </div>
+        <div
+          className="absolute inset-0 opacity-[0.05] mix-blend-multiply
+          [background-image:
+            repeating-radial-gradient(
+              rgba(0,0,0,0.05) 0,
+              rgba(0,0,0,0.05) 1px,
+              transparent 1px,
+              transparent 3px
+            )
+          ]
+          [background-size:4px_4px]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90" />
       </div>
 
-      {/* What we do */}
-      <section className="mt-10 rounded-3xl border p-8">
-        <h2 className="text-xl font-semibold">Бид юу хийдэг вэ?</h2>
-        <p className="mt-3 text-gray-700">
-          Бид хамгаалалтын үйлчилгээг зөвхөн “харуул” түвшинд бус, эрсдэлийн үнэлгээ, төлөвлөлт,
-          процесс, сургалт, хяналт-шалгалт зэрэг цогцоор нь авч үздэг.
-        </p>
+      <div className="mx-auto max-w-6xl px-6 py-12">
+        {/* HERO */}
+        <section className="relative overflow-hidden rounded-3xl border border-sky-200 bg-white/80 shadow-sm">
+          <div className="relative h-[260px] md:h-[320px]">
+            <Image
+              src="/Service/nirunCover.jpg"
+              alt="About Shield Nirun"
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl bg-gray-50 p-6">
-            <div className="font-medium">Shield Nirun</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-700">
-              <li>Объектын хамгаалалт, хяналт</li>
-              <li>24/7 хамгаалалт, шуурхай арга хэмжээ</li>
-              <li>Эрсдэлийн үнэлгээ, төлөвлөгөө</li>
-            </ul>
-            <Link
-              href="/services/shield-nirun"
-              className="mt-4 inline-flex text-sm font-medium hover:underline"
-            >
-              Дэлгэрэнгүй үзэх →
-            </Link>
+            {/* subtle glow */}
+            <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-200/25 blur-3xl" />
+
+            <div className="absolute inset-0 flex items-end">
+              <div className="p-8 md:p-10">
+                <div className="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/18 backdrop-blur">
+                  Бидний тухай
+                </div>
+                <h1 className="mt-4 text-3xl font-bold tracking-tight text-white md:text-4xl">
+                  Найдвартай хамгаалалт,
+                  <span className="block">цогц үйлчилгээ</span>
+                </h1>
+                <p className="mt-3 max-w-2xl text-white/90">
+                  Shield Nirun нь аюулгүй байдал, хамгаалалт болон үйлчилгээний салбарт
+                  харилцагчийн хэрэгцээнд нийцсэн шийдлийг мэргэжлийн түвшинд санал болгодог.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="rounded-2xl bg-gray-50 p-6">
-            <div className="font-medium">Shield Service</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-gray-700">
-              <li>Зөвлөх үйлчилгээ, стандарт/процесс</li>
-              <li>Сургалт, дадлага, зөвлөмж</li>
-              <li>Техникийн шийдэл, дэмжлэг</li>
-            </ul>
-            <Link
-              href="/services/shield-service"
-              className="mt-4 inline-flex text-sm font-medium hover:underline"
-            >
-              Дэлгэрэнгүй үзэх →
-            </Link>
+          {/* quick actions (consistent buttons) */}
+          <div className="flex flex-col gap-3 border-t border-black/5 bg-white/80 p-6 md:flex-row md:items-center md:justify-between">
+            <div className="text-sm text-gray-700">
+              Танай хэрэгцээнд тохирсон шийдлийг санал болгоё.
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="rounded-full bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
+              >
+                Холбоо барих
+              </Link>
+              <Link
+                href="/services"
+                className="rounded-full border border-sky-200 bg-white/80 px-5 py-2.5 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                Үйлчилгээнүүд үзэх
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Why us */}
-      <section className="mt-10 grid gap-6 lg:grid-cols-2">
-        <div className="rounded-3xl border p-8">
-          <h2 className="text-xl font-semibold">Яагаад бид вэ?</h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700">
-            <li>Хэрэгцээнд нийцсэн шийдэл, уян хатан үйлчилгээ</li>
-            <li>Стандартчилсан ажиллагаа, тайлагнал</li>
-            <li>Шуурхай холбоо, түргэн хариу арга хэмжээ</li>
-            <li>Нууцлал, хариуцлага, сахилга бат</li>
-          </ul>
-        </div>
+        {/* INTRO */}
+        <section className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              k: "Алсын хараа",
+              t: "Найдвартай хамгаалалт, тогтвортой орчин",
+              d: "Аюулгүй байдлын чанартай үйлчилгээ, системтэй ажиллагаагаар харилцагчийн итгэлийг бий болгоно.",
+            },
+            {
+              k: "Эрхэм зорилго",
+              t: "Эрсдэлийг бууруулж, хамгаалалтыг сайжруулах",
+              d: "Үйл ажиллагаанд нийцсэн хамгаалалтын шийдэл боловсруулж, хэрэгжилтийг тогтвортой хангана.",
+            },
+            {
+              k: "Үнэ цэнэ",
+              t: "Хариуцлага • Шударга • Шуурхай",
+              d: "Нууцлал, сахилга бат, ил тод байдлыг эрхэмлэн харилцагчийн аюулгүй байдлыг нэн тэргүүнд тавина.",
+            },
+          ].map((x) => (
+            <div
+              key={x.k}
+              className="rounded-3xl border border-sky-200 bg-white/80 p-6 shadow-sm"
+            >
+              <div className="text-xs font-semibold text-sky-800">{x.k}</div>
+              <div className="mt-2 text-lg font-semibold text-gray-900">{x.t}</div>
+              <p className="mt-2 text-gray-700">{x.d}</p>
+            </div>
+          ))}
+        </section>
 
-        <div className="rounded-3xl border p-8">
-          <h2 className="text-xl font-semibold">Ажиллах процесс</h2>
-          <ol className="mt-4 list-decimal space-y-2 pl-5 text-gray-700">
-            <li>Хэрэгцээ тодорхойлох, уулзалт</li>
-            <li>Эрсдэлийн үнэлгээ, санал боловсруулах</li>
-            <li>Гэрээ, хэрэгжилтийн төлөвлөгөө</li>
-            <li>Хэрэгжилт + хяналт, сайжруулалт</li>
-          </ol>
-          <Link
-            href="/contact"
-            className="mt-6 inline-flex rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
-          >
-            Холбоо барих
-          </Link>
-        </div>
-      </section>
+        {/* WHAT WE DO */}
+        <section className="mt-12 rounded-3xl border border-sky-200 bg-white/80 p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-gray-900">Бид юу хийдэг вэ?</h2>
+          <p className="mt-3 max-w-3xl text-gray-700">
+            Бид хамгаалалт, үйлчилгээг зөвхөн гүйцэтгэл бус,{" "}
+            <span className="font-semibold">эрсдэлийн үнэлгээ, төлөвлөлт, процесс, хяналт</span>{" "}
+            зэрэгтэй уялдуулсан цогц байдлаар хэрэгжүүлдэг.
+          </p>
 
-      {/* CTA */}
-      <section className="mt-10 rounded-3xl border p-8">
-        <h2 className="text-xl font-semibold">Үнийн санал авах уу?</h2>
-        <p className="mt-2 text-gray-700">
-          Танай байгууллага/объектын онцлогт тохирсон хамгаалалтын шийдэл санал болгоё.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link
-            href="/contact"
-            className="rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
-          >
-            Үнийн санал авах
-          </Link>
-          <Link
-            href="/services"
-            className="rounded-full border px-5 py-2.5 text-sm font-medium hover:bg-gray-50"
-          >
-            Үйлчилгээнүүд үзэх
-          </Link>
-        </div>
-      </section>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {/* Shield Nirun */}
+            <div className="rounded-3xl border border-black/5 bg-white/70 p-6">
+              <div className="text-sm font-semibold text-sky-800">Shield Nirun</div>
+              <p className="mt-2 font-medium text-gray-900">
+                Харуул хамгаалалт • Хувийн бие хамгаалалт • Камерын систем
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                <li>• Объектын харуул хамгаалалт</li>
+                <li>• VIP / хувийн бие хамгаалалт</li>
+                <li>• Камер суурилуулалт, хяналт</li>
+                <li>• Шуурхай арга хэмжээ, тайлагнал</li>
+              </ul>
+              <Link
+                href="/services/shield-nirun"
+                className="mt-4 inline-flex text-sm font-semibold text-sky-700 hover:underline"
+              >
+                Дэлгэрэнгүй →
+              </Link>
+            </div>
+
+            {/* Shield Service */}
+            <div className="rounded-3xl border border-black/5 bg-white/70 p-6">
+              <div className="text-sm font-semibold text-sky-800">Shield Service</div>
+              <p className="mt-2 font-medium text-gray-900">Цэвэрлэгээ • Нүүлгэлтийн үйлчилгээ</p>
+              <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                <li>• Оффисын цэвэрлэгээ</li>
+                <li>• Гэр ахуйн гүн цэвэрлэгээ</li>
+                <li>• Нүүлгэлтийн үйлчилгээ</li>
+                <li>• Тээвэрлэлт, зохион байгуулалт</li>
+              </ul>
+              <Link
+                href="/services/shield-service"
+                className="mt-4 inline-flex text-sm font-semibold text-sky-700 hover:underline"
+              >
+                Дэлгэрэнгүй →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY US + PROCESS */}
+        <section className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="rounded-3xl border border-sky-200 bg-white/80 p-8 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">Яагаад бид вэ?</h2>
+            <ul className="mt-4 space-y-2 text-gray-700">
+              <li>• Хэрэгцээнд нийцсэн уян хатан шийдэл</li>
+              <li>• Стандартчилсан ажиллагаа, тайлагнал</li>
+              <li>• Шуурхай холбоо, хариу арга хэмжээ</li>
+              <li>• Нууцлал, сахилга бат, хариуцлага</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border border-sky-200 bg-white/80 p-8 shadow-sm">
+            <h2 className="text-xl font-bold text-gray-900">Ажиллах процесс</h2>
+            <ol className="mt-4 space-y-2 text-gray-700">
+              <li>1. Хэрэгцээ тодорхойлох, уулзалт</li>
+              <li>2. Үнэлгээ, санал боловсруулах</li>
+              <li>3. Гэрээ, хэрэгжилт</li>
+              <li>4. Хяналт, сайжруулалт</li>
+            </ol>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="mt-12 rounded-3xl border border-sky-200 bg-white/80 p-8 shadow-sm">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <div className="text-sm font-semibold text-sky-800">Дараагийн алхам</div>
+              <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                Танай хэрэгцээнд тохирсон шийдэл санал болгоё
+              </h2>
+              <p className="mt-2 text-gray-700">Бидэнтэй холбогдож дэлгэрэнгүй мэдээлэл аваарай.</p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3 md:mt-0">
+              <Link
+                href="/contact"
+                className="rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
+              >
+                Холбоо барих
+              </Link>
+              <Link
+                href="/services"
+                className="rounded-full border border-sky-200 bg-white/80 px-6 py-3 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+              >
+                Үйлчилгээнүүд үзэх
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
