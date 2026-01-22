@@ -3,10 +3,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="bg-white text-gray-900">
-
-      {/* =========================
-    HERO (Light white + rich canvas noise)
-   ========================= */}
 <section className="relative isolate overflow-hidden">
   {/* BACKGROUND */}
   <div className="absolute inset-0 -z-10 overflow-hidden">
