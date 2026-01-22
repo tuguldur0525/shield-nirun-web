@@ -95,7 +95,7 @@ export default function Home() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
               href="tel:+97690000000"
-              className="inline-flex items-center justify-center rounded-full bg-sky-600 px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+              className="inline-flex items-center justify-center rounded-full bg-sky-600 px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
             >
               Бидэнтэй холбогдох
             </a>
@@ -367,7 +367,7 @@ export default function Home() {
 
             <a
               href="tel:+97690000000"
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-800 hover:shadow-lg md:mt-0"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-700 hover:shadow-lg md:mt-0"
             >
               Одоо залгах
             </a>
@@ -528,7 +528,7 @@ export default function Home() {
 
             <a
               href="tel:+97690000000"
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-800 hover:shadow-lg md:mt-0"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-700 hover:shadow-lg md:mt-0"
             >
               Одоо залгах
             </a>
@@ -722,7 +722,7 @@ export default function Home() {
 
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
+                className="inline-flex items-center justify-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-sky-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
               >
                 Үйлчилгээнүүд үзэх →
               </Link>
