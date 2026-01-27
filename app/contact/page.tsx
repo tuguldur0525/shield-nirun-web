@@ -63,7 +63,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8 xl:max-w-[76rem] 2xl:max-w-[86rem]">
         {/* HERO */}
         <section className="relative overflow-hidden rounded-3xl border border-sky-200 bg-white/80 shadow-sm">
           <div className="relative h-[260px] md:h-[300px]">

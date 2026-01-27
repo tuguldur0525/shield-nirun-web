@@ -51,6 +51,7 @@ export default function Navbar() {
       const active = isActive(pathname, href);
       return [
         "group relative rounded-full px-4 py-2 text-sm font-medium transition",
+        "xl:px-5 xl:py-2.5 xl:text-[15px]",
         active ? "text-gray-900" : "text-gray-700 hover:text-gray-900",
       ].join(" ");
     };
@@ -62,9 +63,7 @@ export default function Navbar() {
       <div
         className={[
           "relative transition-all duration-300",
-          scrolled
-            ? "border-b border-black/10 shadow-sm"
-            : "border-b border-black/5",
+          scrolled ? "border-b border-black/10 shadow-sm" : "border-b border-black/5",
         ].join(" ")}
       >
         {/* BACKGROUND – SOLID WHITE WITH LIGHT DETAIL */}
@@ -104,7 +103,12 @@ export default function Navbar() {
         {/* CONTENT */}
         <div
           className={[
-            "mx-auto flex max-w-6xl items-center justify-between px-6 transition-all duration-300",
+            "mx-auto flex items-center justify-between transition-all duration-300",
+            // ✅ Desktop дээр өргөн болгож хоосон зайг багасгана
+            "w-full max-w-6xl px-6",
+            "lg:max-w-7xl lg:px-10",
+            "xl:max-w-[88rem] xl:px-12",
+            "2xl:max-w-[96rem]",
             scrolled ? "py-3" : "py-4",
           ].join(" ")}
         >
@@ -113,15 +117,15 @@ export default function Navbar() {
             <Image
               src="/nirunLogo.svg"
               alt="Shield Nirun"
-              width={100}
-              height={30}
+              width={110}
+              height={32}
               priority
-              className="opacity-100"
+              className="opacity-100 xl:w-[120px]"
             />
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden items-center gap-2 md:flex">
+          <nav className="hidden items-center gap-2 md:flex xl:gap-3">
             {nav.map((item) => {
               const active = isActive(pathname, item.href);
               return (
@@ -144,7 +148,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <a
               href="tel:+97690000000"
-              className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
+              className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700 xl:px-6 xl:py-3 xl:text-[15px]"
             >
               Бидэнтэй холбогдох
             </a>
@@ -199,9 +203,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={[
                       "flex items-center justify-between rounded-2xl border px-4 py-3 text-sm font-semibold transition",
-                      active
-                        ? "border-sky-300 bg-sky-50 text-sky-700"
-                        : "border-black/10 text-gray-900 hover:bg-gray-50",
+                      active ? "border-sky-300 bg-sky-50 text-sky-700" : "border-black/10 text-gray-900 hover:bg-gray-50",
                     ].join(" ")}
                   >
                     {item.label}

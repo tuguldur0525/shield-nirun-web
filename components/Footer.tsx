@@ -10,8 +10,8 @@ const nav = [
 ];
 
 const socials = [
-  { href: "https://facebook.com", label: "Facebook" },
-  { href: "https://instagram.com", label: "Instagram" },
+  { href: "https://facebook.com/mongole.mn", label: "Facebook" },
+  { href: "https://www.instagram.com/shieldnirun_/", label: "Instagram" },
   { href: "https://linkedin.com", label: "LinkedIn" },
   { href: "https://youtube.com", label: "YouTube" },
 ];
@@ -21,13 +21,17 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-16 overflow-hidden border-t border-black/5">
+      {/* glows */}
+      <div className="absolute -top-10 -left-40 h-[610px] w-[680px] rounded-full bg-sky-300/25 blur-[1000px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[900px] 2xl:w-[1000px]" />
+      <div className="absolute -bottom-5 -right-20 h-[610px] w-[680px] rounded-full bg-sky-300/25 blur-[1300px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[900px] 2xl:w-[1000px]" />
+
       {/* Light + canvas background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-sky-50" />
 
-        <div className="absolute -top-40 -left-40 h-[620px] w-[620px] rounded-full bg-sky-200/28 blur-[120px]" />
-        <div className="absolute -top-44 right-[-220px] h-[680px] w-[680px] rounded-full bg-cyan-200/22 blur-[140px]" />
-        <div className="absolute bottom-[-260px] left-1/3 h-[720px] w-[720px] rounded-full bg-sky-100/30 blur-[160px]" />
+        <div className="absolute -top-40 -left-40 h-[620px] w-[620px] rounded-full bg-sky-200/28 blur-[120px] xl:h-[780px] xl:w-[780px] 2xl:h-[920px] 2xl:w-[920px]" />
+        <div className="absolute -top-44 right-[-220px] h-[680px] w-[680px] rounded-full bg-cyan-200/22 blur-[140px] xl:h-[840px] xl:w-[840px] 2xl:h-[980px] 2xl:w-[980px]" />
+        <div className="absolute bottom-[-260px] left-1/3 h-[720px] w-[720px] rounded-full bg-sky-100/30 blur-[160px] xl:h-[900px] xl:w-[900px] 2xl:h-[1040px] 2xl:w-[1040px]" />
 
         <div
           className="absolute inset-0 opacity-[0.045]
@@ -54,9 +58,10 @@ export default function Footer() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-14">
+      {/* ✅ Контейнер: 1470 дээр compact, зөвхөн 2xl дээр арай өргөн */}
+      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 xl:max-w-[84rem] 2xl:max-w-[92rem] 2xl:py-14">
         {/* Top */}
-        <div className="grid gap-10 md:grid-cols-12">
+        <div className="grid items-start gap-8 md:grid-cols-12 xl:gap-10">
           {/* Brand */}
           <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center">
@@ -70,22 +75,20 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600">
-              Байгууллага, объектын хамгаалалт, зөвлөх үйлчилгээ, сургалт,
-              техник шийдлүүдийг цогцоор нь санал болгоно.
+            {/* ✅ xl дээр томруулахгүй. Зөвхөн 2xl дээр л жижигхэн өсгөнө */}
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600 2xl:text-base">
+              Байгууллага, объектын хамгаалалт, зөвлөх үйлчилгээ, сургалт, техник шийдлүүдийг цогцоор нь
+              санал болгоно.
             </p>
           </div>
 
           {/* Pages */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <div className="text-sm font-semibold text-gray-900">Хуудаснууд</div>
             <ul className="mt-4 space-y-2">
               {nav.map((i) => (
                 <li key={i.href}>
-                  <Link
-                    href={i.href}
-                    className="text-sm text-gray-700 transition hover:text-gray-900"
-                  >
+                  <Link href={i.href} className="text-sm text-gray-700 transition hover:text-gray-900">
                     <span className="inline-flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-sky-600/70" />
                       {i.label}
@@ -98,10 +101,7 @@ export default function Footer() {
 
           {/* Social */}
           <div className="md:col-span-2">
-            <div className="text-sm font-semibold text-gray-900">
-              Цахим хуудсууд
-            </div>
-
+            <div className="text-sm font-semibold text-gray-900">Цахим хуудсууд</div>
             <ul className="mt-4 space-y-2">
               {socials.map((s) => (
                 <li key={s.label}>
@@ -120,55 +120,58 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <div className="text-sm font-semibold text-gray-900">Холбоо барих</div>
 
-            <div className="mt-4 space-y-4 text-sm text-gray-700">
-              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm">
+            <div className="mt-4 space-y-4">
+              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
                 <div className="text-xs text-gray-500">Утас</div>
-                <a href="tel:+97690000000" className="mt-1 font-semibold text-gray-900">
-                  +976 9000-0000
+                <a href="tel:+97670077010" className="mt-1 block text-gray-900">
+                  +976 7007-7010
                 </a>
               </div>
 
-              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm">
+              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
                 <div className="text-xs text-gray-500">Имэйл</div>
-                <a
-                  href="mailto:info@shieldnirun.mn"
-                  className="mt-1 font-semibold text-gray-900"
-                >
+                <a href="mailto:info@shieldnirun.mn" className="mt-1 block text-gray-900">
                   info@shieldnirun.mn
                 </a>
               </div>
-              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm">
-                <div className="text-xs text-gray-500">Хаяг</div>
-                <div className="mt-1 font-semibold text-gray-900">Улаанбаатар хот</div>
-                <a
-                  className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-sky-800 hover:underline"
-                  href="https://maps.google.com/?q=Ulaanbaatar"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Газрын зураг <span>→</span>
-                </a>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="md:col-span-2">
+            <div className="text-sm font-semibold text-gray-900">Хаяг</div>
+
+            <div className="mt-4 rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
+              <div className="leading-relaxed text-gray-900">
+                Сүхбаатар дүүрэг, 3 хороо,<br />
+                Санто таур 802,<br />
+                Ulaanbaatar, Mongolia
               </div>
+
+              <a
+                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-sky-800 hover:underline"
+                href="https://maps.app.goo.gl/77yTKYbXB4w5c1YT8"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Газрын зураг <span>→</span>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="mt-10 border-t border-black/10 pt-6">
-          <div className="flex flex-auto items-center justify-center gap-3 text-center text-sm text-gray-600 md:flex-row md:text-left">
-            <div>© {year} Shield Nirun. Бүх эрх хуулиар хамгаалагдсан.</div>
-            <div className="inline-flex items-center gap-2 text-xs text-gray-500">
-            </div>
+          <div className="flex items-center justify-center text-center text-sm text-gray-600">
+            © {year} Shield Nirun. Бүх эрх хуулиар хамгаалагдсан.
           </div>
 
           <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
         </div>
-        
       </div>
-
     </footer>
   );
 }

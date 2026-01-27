@@ -37,7 +37,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 py-14">
+      <div className="mx-auto max-w-6xl py-12 px-6 lg:px-8 xl:max-w-[70rem] 2xl:max-w-[86rem]">
       {/* Header */}
       <section className="relative overflow-hidden rounded-3xl border border-sky-200 bg-white/80 p-10 shadow-sm">
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-200/25 blur-3xl" />
