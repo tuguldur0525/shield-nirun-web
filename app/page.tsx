@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -468,7 +467,7 @@ export default function Home() {
               Яагаад бид вэ?
             </h2>
 
-            <p className="max-w-3xl text-gray-700 leading-relaxed">
+            <p className="max-w-5xl text-gray-700 leading-relaxed">
               Бид хамгаалалт, зөвлөх үйлчилгээ, сургалт, техник шийдлийг{" "}
               <span className="font-semibold text-gray-900">нэг стандарт</span>
               -аар удирдаж, хэрэгжилт–хяналт–тайлагналын тасралтгүй циклийг
@@ -648,7 +647,7 @@ export default function Home() {
               Ажиллах процесс
             </h2>
 
-            <p className="max-w-3xl text-gray-700 leading-relaxed">
+            <p className="max-w-5xl text-gray-700 leading-relaxed">
               Бид ажил эхлэхээс өмнө хэрэгцээг тодорхойлж, эрсдэлийг үнэлэн,
               төлөвлөгөөг хэрэгжүүлж, дараа нь тогтмол хяналт ба тайлагнал хийж
               үйлчилгээний чанарыг тасралтгүй сайжруулдаг.

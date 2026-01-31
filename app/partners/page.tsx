@@ -145,7 +145,7 @@ export default function PartnersPage() {
                     type="button"
                     onClick={() => setTab("partners")}
                     className={[
-                      "rounded-xl px-4 py-2 text-sm font-semibold transition",
+                      "rounded-xl px-4 py-3 text-sm font-semibold transition",
                       tab === "partners"
                         ? "bg-sky-700 text-white shadow-sm"
                         : "bg-white/70 text-sky-900 hover:bg-white",
@@ -339,7 +339,7 @@ function ActivitiesSection({
             key={a.id}
             className="group overflow-hidden rounded-3xl border border-sky-200 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
           >
-            <div className="relative h-48 w-full bg-gray-100">
+            <div className="relative h-60 w-full bg-gray-100">
               {a.cover ? (
                 <Image
                   src={a.cover}
@@ -387,20 +387,44 @@ function ActivitiesSection({
                 </ul>
               ) : null}
 
-              {/* ✅ clickable gallery thumbnails */}
+                            {/* ✅ clickable gallery thumbnails */}
               {a.gallery?.length ? (
                 <div className="mt-6 grid grid-cols-3 gap-2">
-                  {a.gallery.slice(0, 3).map((g, idx) => (
-                    <button
-                      key={g}
-                      type="button"
-                      onClick={() => openLightbox(a.gallery!, idx)}
-                      className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100"
-                      aria-label="Open image"
-                    >
-                      <Image src={g} alt="Gallery" fill className="object-cover" sizes="33vw" />
-                    </button>
-                  ))}
+                  {a.gallery.slice(0, 3).map((g, idx) => {
+                    const extra = a.gallery!.length - 3;
+                    const isLastThumb = idx === 2;
+                    const showOverlay = isLastThumb && extra > 0;
+
+                    return (
+                      <button
+                        key={g}
+                        type="button"
+                        onClick={() => openLightbox(a.gallery!, idx)}
+                        className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100"
+                        aria-label="Open image"
+                      >
+                        <Image
+                          src={g}
+                          alt="Gallery"
+                          fill
+                          className="object-cover"
+                          sizes="33vw"
+                        />
+
+                        {/* Overlay: зөвхөн 3 дахь зураг дээр, 3-аас олон зурагтай үед */}
+                        {showOverlay && (
+                          <>
+                            <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px]" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="inline-flex items-center rounded-xl bg-white/20 px-4 py-2 text-md font-medium text-white">
+                                +{extra}
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </button>
+                    );
+                  })}
                 </div>
               ) : null}
 

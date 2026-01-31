@@ -21,12 +21,12 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-16 overflow-hidden border-t border-black/5">
-      {/* glows */}
-      <div className="absolute -top-10 -left-40 h-[610px] w-[680px] rounded-full bg-sky-300/25 blur-[1000px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[900px] 2xl:w-[1000px]" />
-      <div className="absolute -bottom-5 -right-20 h-[610px] w-[680px] rounded-full bg-sky-300/25 blur-[1300px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[900px] 2xl:w-[1000px]" />
+      {/* glows (✅ click blocking-г болиулав) */}
+      <div className="pointer-events-none absolute -top-10 -left-40 h-[510px] w-[680px] rounded-full bg-sky-200/25 blur-[1000px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[700px] 2xl:w-[1000px]" />
+      <div className="pointer-events-none absolute -bottom-5 -right-20 h-[610px] w-[680px] rounded-full bg-sky-200/25 blur-[1300px] animate-float10 xl:h-[760px] xl:w-[860px] 2xl:h-[900px] 2xl:w-[1000px]" />
 
-      {/* Light + canvas background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      {/* Light + canvas background (✅ click blocking-г болиулав) */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-sky-50" />
 
         <div className="absolute -top-40 -left-40 h-[620px] w-[620px] rounded-full bg-sky-200/28 blur-[120px] xl:h-[780px] xl:w-[780px] 2xl:h-[920px] 2xl:w-[920px]" />
@@ -58,8 +58,8 @@ export default function Footer() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/90" />
       </div>
 
-      {/* ✅ Контейнер: 1470 дээр compact, зөвхөн 2xl дээр арай өргөн */}
-      <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 xl:max-w-[84rem] 2xl:max-w-[92rem] 2xl:py-14">
+      {/* Контент (layout өөрчлөхгүйгээр зөвхөн z-index өгсөн) */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 xl:max-w-[84rem] 2xl:max-w-[92rem] 2xl:py-14">
         {/* Top */}
         <div className="grid items-start gap-8 md:grid-cols-12 xl:gap-10">
           {/* Brand */}
@@ -75,7 +75,6 @@ export default function Footer() {
               />
             </Link>
 
-            {/* ✅ xl дээр томруулахгүй. Зөвхөн 2xl дээр л жижигхэн өсгөнө */}
             <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600 2xl:text-base">
               Байгууллага, объектын хамгаалалт, зөвлөх үйлчилгээ, сургалт, техник шийдлүүдийг цогцоор нь
               санал болгоно.
@@ -88,7 +87,10 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {nav.map((i) => (
                 <li key={i.href}>
-                  <Link href={i.href} className="text-sm text-gray-700 transition hover:text-gray-900">
+                  <Link
+                    href={i.href}
+                    className="text-sm text-gray-700 transition hover:text-gray-900"
+                  >
                     <span className="inline-flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-sky-600/70" />
                       {i.label}
@@ -151,13 +153,14 @@ export default function Footer() {
                 Ulaanbaatar, Mongolia
               </div>
 
+              {/* ✅ Одоо заавал дарна */}
               <a
-                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-sky-800 hover:underline"
-                href="https://maps.app.goo.gl/77yTKYbXB4w5c1YT8"
+                href="https://maps.app.goo.gl/h9g2sZMpHbYLqyS47"
                 target="_blank"
                 rel="noreferrer"
+                className="relative z-20 mt-3 inline-flex items-center gap-2 text-sm font-semibold text-sky-800 hover:underline"
               >
-                Газрын зураг <span>→</span>
+                Газрын зураг <span aria-hidden>→</span>
               </a>
             </div>
           </div>

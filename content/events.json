@@ -1,10 +1,10 @@
 [
   {
     "id": "event-1",
-    "title": "Концертын хамгаалалтын үйлчилгээ",
-    "type": "Концерт / Event",
-    "cover": "/Events/event1-cover.jpg",
-    "client": "Event зохион байгуулагч",
+    "title": "Gangaa \"BLUES\" тоглолт",
+    "type": "Дотор талбайн концерт / Event",
+    "cover": "/Events/gangaa/13.jpg",
+    "client": "Концертын хамгаалалтын үйлчилгээ",
     "period": "2025.03",
     "summary": "Олон хүний оролцоотой арга хэмжээнд нэвтрэлт, бүсчлэл, камерын хяналтыг зохион байгуулсан.",
     "highlights": [
@@ -13,23 +13,94 @@
       "Шуурхай багийн зохион байгуулалт"
     ],
     "gallery": [
-      "/Events/event1-cover.jpg",
-      "/Events/event2-cover.jpg"
+      "/Events/gangaa/6.jpg",
+      "/Events/gangaa/16.jpg",
+      "/Events/gangaa/13.jpg",
+      "/Events/gangaa/11.jpg",
+      "/Events/gangaa/9.jpg"
+    ]
+  }, 
+  {
+    "id": "event-2",
+    "title": "Sonos Music Festival - ARASH",
+    "type": "Гадна талбайн концерт / Event",
+    "cover": "/Events/arash/1.png",
+    "client": "Арга хэмжээний хамгаалалтын үйлчилгээ, VIP хувийн бие хамгаалалт",
+    "period": "2024.10",
+    "summary": "Sonos Music Festival - ARASH арга хэмжээнд оролцогчдын болон үзэгчдийн аюулгүй байдлыг ханган ажилласан.",
+    "highlights": [
+      "Нэвтрэлтийн цэгийн хяналт",
+      "Дотор/гадна бүсчлэл",
+      "VIP хувийн бие хамгаалалт"
+    ],
+    "gallery": [
+      "/Events/arash/2.png",
+      "/Events/arash/3.png",
+      "/Events/arash/4.png",
+      "/Events/arash/5.png",
+      "/Events/arash/6.png",
+      "/Events/arash/7.png"
     ]
   },
   {
-    "id": "event-2",
-    "title": "Оффис нүүлгэлтийн ажил",
-    "type": "Нүүлгэлт",
-    "cover": "/Events/event2-cover.jpg",
-    "client": "Компанийн нэр",
-    "period": "2024.11",
-    "summary": "Сав баглаа, тээвэр, байршуулалт, хог хаягдлын зохион байгуулалтыг нэг дор хийсэн.",
+    "id": "event-3",
+    "title": "SNAP x XARTAC",
+    "type": "Дотор талбайн арга хэмжээ / Event",
+    "cover": "/Events/snap/1.png",
+    "client": "Арга хэмжээний хамгаалалтын үйлчилгээ",
+    "period": "2024.09",
+    "summary": "SNAP x XARTAC арга хэмжээнд оролцогчдын болон үзэгчдийн аюулгүй байдлыг ханган ажилласан.",
     "highlights": [
-      "Сав баглаа боодол",
-      "Аюулгүй тээвэрлэлт",
-      "Цагийн төлөвлөгөө"
+      "Нэвтрэлтийн цэгийн хяналт",
+      "Дотор/гадна бүсчлэл",
+      "Шуурхай багийн зохион байгуулалт"
     ],
-    "gallery": []
+    "gallery": [
+      "/Events/snap/2.png",
+      "/Events/snap/3.png",
+      "/Events/snap/4.png",
+      "/Events/snap/5.png"
+    ]
+  },
+  {
+    "id": "event-4",
+    "title": "ҮНДЭСНИЙ ВОЛЛЕЙБОЛЫН ДЭД ЛИГ 2026",
+    "type": "Дотор талбайн арга хэмжээ / Спортын тэмцээн",
+    "cover": "/Events/volleyball/1.png",
+    "client": "Арга хэмжээний хамгаалалтын үйлчилгээ",
+    "period": "2026.01",
+    "summary": "ҮНДЭСНИЙ ВОЛЛЕЙБОЛЫН ДЭД ЛИГ 2026 арга хэмжээнд оролцогчдын болон үзэгчдийн аюулгүй байдлыг ханган ажилласан.",
+    "highlights": [
+      "Нэвтрэлтийн цэгийн хяналт",
+      "Дотор/гадна бүсчлэл",
+      "Шуурхай багийн зохион байгуулалт"
+    ],
+    "gallery": [
+      "/Events/volleyball/2.png",
+      "/Events/volleyball/3.png",
+      "/Events/volleyball/4.png",
+      "/Events/volleyball/5.png"
+    ]
+  },
+  {
+    "id": "event-5",
+    "title": "DJ SODA x DJ SHAUN ENERGY PARTY",
+    "type": "VIP хувийн бие хамгаалалт",
+    "cover": "/Events/soda/1.jpg",
+    "client": "Energy Music Festival",
+    "period": "2024.11",
+    "summary": "DJ SODA x DJ SHAUN ENERGY PARTY арга хэмжээнд VIP хувийн бие хамгаалалтын үйлчилгээ үзүүлсэн.",
+    "highlights": [
+      "VIP хувийн бие хамгаалалт",
+      "Олон нийтийн аюулгүй байдлын зохион байгуулалт",
+      "Нэвтрэлтийн цэгийн хяналт"
+    ],
+    "gallery": [
+      "/Events/soda/2.jpg",
+      "/Events/soda/4.png",
+      "/Events/soda/5.png",
+      "/Events/soda/6.png",
+      "/Events/soda/7.jpg"
+    ]
   }
 ]

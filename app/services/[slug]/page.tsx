@@ -1,6 +1,3 @@
-// Paste this updated component over your current ServiceDetailPage file.
-// It matches the light/canvas design used on your Services list + Navbar/Footer.
-
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -169,7 +166,7 @@ export default async function ServiceDetailPage({
                       href="tel:+97690000000"
                       className="font-semibold text-sky-700 hover:underline"
                     >
-                      +976 9000-0000
+                      +976 7007-7010
                     </a>
                   </div>
 

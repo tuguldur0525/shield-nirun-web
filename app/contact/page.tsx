@@ -93,7 +93,7 @@ export default function ContactPage() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
-                    href="tel:+97690000000"
+                    href="tel:+97670077010"
                     className="rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-800"
                   >
                     Одоо залгах
@@ -115,9 +115,9 @@ export default function ContactPage() {
               <div className="text-xs text-gray-500">Утас</div>
               <a
                 className="mt-1 inline-block font-semibold text-gray-900 hover:text-sky-700"
-                href="tel:+97690000000"
+                href="tel:+97670077010"
               >
-                +976 9000-0000
+                +976 7007-7010
               </a>
             </div>
             <div className="rounded-2xl border border-black/5 bg-white/70 px-4 py-3">
@@ -159,9 +159,9 @@ export default function ContactPage() {
             <div className="text-xs font-semibold text-gray-500">Утас</div>
             <a
               className="mt-2 inline-block font-semibold text-gray-900 hover:text-sky-700"
-              href="tel:+97690000000"
+              href="tel:+97670077010"
             >
-              +976 9000-0000
+              +976 7007-7010
             </a>
             <div className="mt-2 text-sm text-gray-600">
               Шууд залгахад автоматаар утас нээгдэнэ.
@@ -286,7 +286,7 @@ export default function ContactPage() {
 
         <div className="flex flex-wrap gap-3">
           <a
-            href="tel:+97690000000"
+            href="tel:+97670077010"
             className="inline-flex flex-1 items-center justify-center rounded-full border border-sky-200 bg-white/80 px-5 py-3 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
           >
             Залгах
@@ -358,7 +358,7 @@ export default function ContactPage() {
           Асууж тодруулах бол шууд залгаарай.
         </div>
         <a
-          href="tel:+97690000000"
+          href="tel:+97670077010"
           className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-sky-200 bg-white/80 px-5 py-2.5 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
         >
           Залгах
