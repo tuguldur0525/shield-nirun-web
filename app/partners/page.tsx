@@ -129,12 +129,11 @@ export default function PartnersPage() {
             </div>
 
             <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-              Хамтрагч & Хамтарсан ажлууд
+              Хамтрагч болон хамтарсан ажлууд
             </h1>
 
             <p className="mt-3 max-w-7xl text-gray-700">
-              Бид байгууллага болон арга хэмжээний хэрэгцээнд тохируулан хамгаалалт, камерын хяналт,
-              цэвэрлэгээ, нүүлгэлтийн үйлчилгээг төлөвлөлттэйгээр хэрэгжүүлдэг.
+              Бид байгууллага болон төрөл бүрийн арга хэмжээний онцлог, хэрэгцээ, эрсдэлийн түвшинд тулгуурлан хамгаалалт, камерын хяналт, цэвэрлэгээ, нүүлгэлтийн үйлчилгээг уялдаа холбоотойгоор төлөвлөж, хэрэгжилтийг мэргэжлийн түвшинд зохион байгуулдаг. Үйлчилгээ бүрийг урьдчилсан үнэлгээ, тодорхой төлөвлөгөө, хэрэгжилтийн үеийн хяналт, гүйцэтгэлийн тайлагналын нэгдсэн горимоор хэрэгжүүлснээр аюулгүй байдал, эмх цэгц, ажиллагааны тасралтгүй байдлыг хангаж, харилцагчийн үйл ажиллагаанд бодит дэмжлэг үзүүлж ажилладаг.
             </p>
 
             {/* Tabs */}
@@ -253,8 +252,8 @@ export default function PartnersPage() {
 
 function PartnersSection({ partners }: { partners: PartnerOrg[] }) {
   return (
-    <section className="mx-auto max-w-6xl px-6 lg:px-8 xl:max-w-[76rem] 2xl:max-w-[86rem]">
-      <div className="flex flex-col gap-2">
+    <section className="mx-auto max-w-6xl px-6  lg:px-8 xl:max-w-[76rem] 2xl:max-w-[86rem]">
+      <div className="flex flex-col gap-2 px-4">
         <h2 className="text-2xl font-extrabold text-gray-900">Хамтрагч байгууллагууд</h2>
         <p className="max-w-3xl text-gray-700">
           Байгууллага бүрт тохирсон хэрэгжилт, тогтмол хяналт ба тайлагналын загвараар хамтран ажилладаг.
@@ -326,7 +325,7 @@ function ActivitiesSection({
 }) {
   return (
     <section className="mx-auto max-w-6xl px-6 lg:px-8 xl:max-w-[76rem] 2xl:max-w-[86rem]">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 px-4">
         <h2 className="text-2xl font-extrabold text-gray-900">Хамтарсан үйл ажиллагаа</h2>
         <p className="max-w-3xl text-gray-700">
           Концерт, event, нүүлгэлт зэрэг ажлуудад төлөвлөлт → хэрэгжилт → хяналт → тайлагнал гэсэн горимоор ажилладаг.
@@ -457,9 +456,7 @@ function WorksSection({
 }) {
   return (
     <section className="mx-auto max-w-6xl px-6 lg:px-8 xl:max-w-[76rem] 2xl:max-w-[86rem]">
-      <div className="flex flex-col gap-2">
-        
-
+      <div className="flex flex-col gap-2 px-4">
         <h2 className="text-2xl font-extrabold text-gray-900">Хийсэн ажлууд</h2>
         <p className="max-w-3xl text-gray-700">
           Бодит хэрэгжилт дээр төвлөрсөн кейсүүд — товч мэдээлэл, гол үр дүн, зураг.

@@ -18,16 +18,6 @@ export default function ContactPage() {
     );
     return `mailto:${toEmail}?subject=${subject}&body=${body}`;
   }, [name, phone, message, toEmail]);
-
-  // Recruitment mailto
-  const jobMailtoHref = useMemo(() => {
-    const subject = encodeURIComponent("Ажилд орох хүсэлт / CV илгээх");
-    const body = encodeURIComponent(
-      `Сайн байна уу?\n\nБи Shield Nirun / Shield Service-д ажил горилох хүсэлтэй байна.\n\nНэр:\nУтас:\nИ-мэйл:\nГорилж буй албан тушаал:\nТуршлага (товч):\n\nCV (attachment) хавсарган илгээнэ.\n`
-    );
-    return `mailto:${toEmail}?subject=${subject}&body=${body}`;
-  }, [toEmail]);
-
   return (
     <main className="relative overflow-hidden">
       {/* Light + canvas background (shared design) */}
@@ -68,7 +58,7 @@ export default function ContactPage() {
         <section className="relative overflow-hidden rounded-3xl border border-sky-200 bg-white/80 shadow-sm">
           <div className="relative h-[260px] md:h-[300px]">
             <Image
-              src="/Service/nirunCover.jpg"
+              src="/1.png"
               alt="Contact cover"
               fill
               priority
@@ -94,7 +84,7 @@ export default function ContactPage() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
                     href="tel:+97670077010"
-                    className="rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-800"
+                    className="rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
                   >
                     Одоо залгах
                   </a>
@@ -133,7 +123,7 @@ export default function ContactPage() {
               <div className="text-xs text-gray-500">Байршил</div>
               <a
                 className="mt-1 inline-block font-semibold text-gray-900 hover:text-sky-700"
-                href="https://maps.google.com/?q=Ulaanbaatar"
+                href="https://maps.app.goo.gl/Hy6benZtWuWRbyqL6"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -184,11 +174,11 @@ export default function ContactPage() {
           <div className="rounded-2xl border border-black/5 bg-white/70 p-5 sm:col-span-2">
             <div className="text-xs font-semibold text-gray-500">Хаяг</div>
             <div className="mt-2 font-semibold text-gray-900">
-              Улаанбаатар хот, (хаягаа энд бичнэ)
+              Сүхбаатар дүүрэг, 3 хороо, Санто таур 802, Ulaanbaatar, Mongolia
             </div>
             <div className="mt-3">
               <a
-                href="https://maps.google.com/?q=Ulaanbaatar"
+                href="https://maps.app.goo.gl/Hy6benZtWuWRbyqL6"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white/80 px-4 py-2 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
@@ -230,10 +220,6 @@ export default function ContactPage() {
           <p className="mt-2 text-gray-600">
             “Имэйлээр илгээх” дээр дархад таны mail app нээгдэнэ (өгөгдөл хадгалахгүй).
           </p>
-        </div>
-
-        <div className="hidden rounded-2xl border border-sky-200 bg-white/80 px-3 py-2 text-xs font-semibold text-sky-800 shadow-sm md:block">
-          Secure • Simple
         </div>
       </div>
 
@@ -279,7 +265,7 @@ export default function ContactPage() {
 
         <a
           href={mailtoHref}
-          className="inline-flex w-full items-center justify-center rounded-full bg-sky-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-800"
+          className="inline-flex w-full items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
         >
           Имэйлээр илгээх
         </a>
@@ -317,17 +303,8 @@ export default function ContactPage() {
           Бид таныг ажилд урьж байна
         </h3>
         <p className="mt-2 text-gray-700">
-          Shield Nirun / Shield Service багт нэгдэхийг хүсвэл CV-гээ илгээгээрэй.
-          Тохирох боломж гармагц бид тантай холбогдоно.
+          Shield Nirun / Shield Service багт нэгдэхийг хүсвэл CV-гээ илгээгээрэй. Тохирох боломж гармагц бид тантай холбогдоно.
         </p>
-      </div>
-
-      <div className="rounded-2xl border border-black/5 bg-white/70 px-5 py-4">
-        <div className="text-xs text-gray-500">CV илгээх</div>
-        <a href={`mailto:${toEmail}`} className="mt-1 inline-block font-semibold text-sky-700 hover:underline">
-          {toEmail}
-        </a>
-        <div className="mt-2 text-xs text-gray-500">PDF хэлбэрээр хавсаргахыг зөвлөе.</div>
       </div>
     </div>
 
@@ -367,19 +344,22 @@ export default function ContactPage() {
     </div>
 
     <div className="mt-6 flex flex-wrap gap-3">
-      <a
-        href={jobMailtoHref}
-        className="rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-800"
-      >
-        CV илгээх →
-      </a>
-      <Link
-        href="/services"
-        className="rounded-full border border-sky-200 bg-white/80 px-6 py-3 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
-      >
-        Үйлчилгээнүүд үзэх
-      </Link>
-    </div>
+  <a
+    href="https://resume.shieldnirun.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-700"
+  >
+    Анкет бөглөх →
+  </a>
+
+  <Link
+    href="/services"
+    className="rounded-full border border-sky-200 bg-white/80 px-6 py-3 text-sm font-semibold text-sky-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+  >
+    Үйлчилгээнүүд үзэх
+  </Link>
+</div>
   </section>
 </section>
         

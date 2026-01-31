@@ -12,7 +12,7 @@ export default function TraditionalGuardPage() {
 
         {/* Title */}
         <h1 className="mt-4 text-3xl font-extrabold text-gray-900">
-          🛡 Уламжлалт харуул хамгаалалт
+          Уламжлалт харуул хамгаалалт
         </h1>
 
         {/* Intro */}
@@ -26,9 +26,9 @@ export default function TraditionalGuardPage() {
         {/* 🔹 Image section */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {[
-            { src: "/tech/guard-1.jpg", alt: "Харуул хамгаалалтын ажилтан" },
-            { src: "/tech/guard-2.webp", alt: "AI камерт суурилсан хяналт" },
-            { src: "/tech/guard-3.webp", alt: "Дрон хяналтын систем" },
+            { src: "/tech/guard-4.jpg", alt: "Харуул хамгаалалтын ажилтан" },
+            { src: "/tech/guard-2.jpg", alt: "AI камерт суурилсан хяналт" },
+            { src: "/tech/guard-1.png", alt: "Дрон хяналтын систем" },
           ].map((img) => (
             <div
               key={img.src}

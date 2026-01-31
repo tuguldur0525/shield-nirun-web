@@ -25,7 +25,7 @@ export default function InstallationPage() {
         {/* Images */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {[
-            { src: "/tech/install-1.jpg", alt: "Хяналтын камер (CCTV) суурилуулалт" },
+            { src: "/tech/install-1.png", alt: "Хяналтын камер (CCTV) суурилуулалт" },
             { src: "/tech/install-2.webp", alt: "Холбоо дохиолол, галын аюул илрүүлэх систем" },
             { src: "/tech/install-3.webp", alt: "Ухаалаг донофон, орц гарцын хяналт" },
           ].map((img) => (

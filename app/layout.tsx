@@ -5,8 +5,17 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Shield Nirun",
+  title: {
+    default: "Shield Nirun",
+    template: "%s | Shield Nirun",
+  },
   description: "Shield Nirun & Shield Service company website",
+
+  icons: {
+    icon: "/favicon.ico",          // browser tab
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",            // iOS
+  },
 };
 
 export default function RootLayout({

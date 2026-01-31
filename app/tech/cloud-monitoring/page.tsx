@@ -12,7 +12,7 @@ export default function ResidentialSecurityPage() {
 
         {/* Title */}
         <h1 className="mt-4 text-3xl font-extrabold text-gray-900">
-          🏙 Хотхоны аюулгүй байдлын цогц шийдэл
+          Хотхоны аюулгүй байдлын цогц шийдэл
         </h1>
 
         {/* Intro */}
@@ -25,9 +25,9 @@ export default function ResidentialSecurityPage() {
         {/* 🔹 Image section */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {[
-            { src: "/tech/complex-1.jpg", alt: "Хотхоны камержуулалт" },
+            { src: "/tech/complex-1.png", alt: "Хотхоны камержуулалт" },
             { src: "/tech/complex-2.jpg", alt: "Орц гарцын хяналтын систем" },
-            { src: "/tech/complex-3.jpg", alt: "Харуул хамгаалалтын хяналт" },
+            { src: "/tech/complex-3.png", alt: "Харуул хамгаалалтын хяналт" },
           ].map((img) => (
             <div
               key={img.src}

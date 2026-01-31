@@ -64,20 +64,21 @@ export default function Footer() {
         <div className="grid items-start gap-8 md:grid-cols-12 xl:gap-10">
           {/* Brand */}
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center">
-              <Image
-                src="/nirunLogo.svg"
-                alt="Shield Nirun"
-                width={140}
-                height={40}
-                priority
-                className="opacity-95"
-              />
-            </Link>
-
+            <div className="flex items-center gap-4">
+  {/* Shield Nirun */}
+  <Link href="/" className="inline-flex items-center">
+    <Image
+      src="/nirunlogo.svg"
+      alt="Shield Nirun"
+      width={140}
+      height={40}
+      priority
+      className="opacity-90 transition hover:opacity-100 "
+    />
+  </Link>
+            </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-gray-600 2xl:text-base">
-              Байгууллага, объектын хамгаалалт, зөвлөх үйлчилгээ, сургалт, техник шийдлүүдийг цогцоор нь
-              санал болгоно.
+            Байгууллага, объектын хамгаалалт, аюулгүй байдлын зөвлөх үйлчилгээ, сургалт, техник шийдлүүдийг олон улсын жишигт нийцсэн стандартын дагуу цогц байдлаар хэрэгжүүлнэ.
             </p>
           </div>
 
@@ -102,38 +103,68 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div className="md:col-span-2">
-            <div className="text-sm font-semibold text-gray-900">Цахим хуудсууд</div>
-            <ul className="mt-4 space-y-2">
-              {socials.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 transition hover:text-sky-700"
-                  >
-                    <span className="h-2 w-2 rounded-full bg-sky-600/60" />
-                    {s.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+<div className="md:col-span-2">
+  <div className="text-sm font-semibold text-gray-900">Цахим хуудсууд</div>
+
+  <ul className="mt-4 space-y-3">
+    {socials.map((s) => (
+      <li key={s.label}>
+        <a
+          href={s.href}
+          target="_blank"
+          rel="noreferrer"
+          className="group inline-flex items-center gap-3 text-sm font-medium text-gray-700 transition hover:text-sky-700"
+        >
+          {/* ICON */}
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-sky-200 bg-white/60 text-sky-600 transition group-hover:bg-sky-50 group-hover:text-sky-700">
+            {s.label === "Facebook" && (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-2.9h2V9.7c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.9h2.3l-.4 2.9h-1.9v7A10 10 0 0022 12z" />
+              </svg>
+            )}
+
+            {s.label === "Instagram" && (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+                <circle cx="17" cy="7" r="1" fill="currentColor" />
+              </svg>
+            )}
+
+            {s.label === "LinkedIn" && (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.94 6.5A1.94 1.94 0 115 4.56 1.94 1.94 0 016.94 6.5zM5 8.5h3.9V19H5zM14.6 8.3a4.3 4.3 0 00-3.8 2.1V8.5H7v10.5h3.9v-5.5c0-1.5.3-3 2.1-3s1.8 1.7 1.8 3.1v5.4H19v-6.2c0-3-1.6-4.5-4.4-4.5z" />
+              </svg>
+            )}
+
+            {s.label === "YouTube" && (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 7.5s-.2-1.7-.8-2.4c-.8-.8-1.7-.8-2.1-.9C16.9 4 12 4 12 4h0s-4.9 0-8.1.2c-.4.1-1.3.1-2.1.9C1.2 5.8 1 7.5 1 7.5S.8 9.5.8 11.4v1.2c0 1.9.2 3.9.2 3.9s.2 1.7.8 2.4c.8.8 1.9.8 2.4.9 1.7.2 7.8.2 7.8.2s4.9 0 8.1-.2c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.4.8-2.4s.2-2 .2-3.9v-1.2c0-1.9-.2-3.9-.2-3.9zM9.8 14.7V8.9l5.2 2.9-5.2 2.9z" />
+              </svg>
+            )}
+          </span>
+
+          {/* LABEL */}
+          <span>{s.label}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* Contact */}
           <div className="md:col-span-2">
             <div className="text-sm font-semibold text-gray-900">Холбоо барих</div>
 
             <div className="mt-4 space-y-4">
-              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
+              <div className="rounded-2xl border border-sky-200 bg-white/20 p-4 shadow-sm 2xl:p-5">
                 <div className="text-xs text-gray-500">Утас</div>
                 <a href="tel:+97670077010" className="mt-1 block text-gray-900">
                   +976 7007-7010
                 </a>
               </div>
 
-              <div className="rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
+              <div className="rounded-2xl border border-sky-200 bg-white/20 p-4 shadow-sm 2xl:p-5">
                 <div className="text-xs text-gray-500">Имэйл</div>
                 <a href="mailto:info@shieldnirun.mn" className="mt-1 block text-gray-900">
                   info@shieldnirun.mn
@@ -146,7 +177,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="text-sm font-semibold text-gray-900">Хаяг</div>
 
-            <div className="mt-4 rounded-2xl border border-sky-200 bg-white/80 p-4 shadow-sm 2xl:p-5">
+            <div className="mt-4 rounded-2xl border border-sky-200 bg-white/20 p-4 shadow-sm 2xl:p-5">
               <div className="leading-relaxed text-gray-900">
                 Сүхбаатар дүүрэг, 3 хороо,<br />
                 Санто таур 802,<br />
