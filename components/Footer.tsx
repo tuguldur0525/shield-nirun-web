@@ -68,7 +68,7 @@ export default function Footer() {
   {/* Shield Nirun */}
   <Link href="/" className="inline-flex items-center">
     <Image
-      src="/nirunlogo.svg"
+      src="/nirunLogo.svg"
       alt="Shield Nirun"
       width={140}
       height={40}
